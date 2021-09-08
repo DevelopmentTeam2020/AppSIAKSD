@@ -15,6 +15,10 @@ class CreateJawabSoalsTable extends Migration
     {
         Schema::create('jawab_soals', function (Blueprint $table) {
             $table->id();
+            $table->integer('soal_id')->length(10);
+            $table->integer('user_id')->length(10);
+            $table->longText('jawab_soal')->nullable();
+            $table->string('file_jawab_soal')->length(50)->nullable();
             $table->timestamps();
         });
     }

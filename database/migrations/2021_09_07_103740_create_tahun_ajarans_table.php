@@ -15,6 +15,9 @@ class CreateTahunAjaransTable extends Migration
     {
         Schema::create('tahun_ajarans', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_tahun_ajaran')->length(20);
+            $table->date('mulai_tahun_ajaran');
+            $table->date('selesai_tahun_ajaran');
             $table->timestamps();
         });
     }

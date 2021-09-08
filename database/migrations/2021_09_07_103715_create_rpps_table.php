@@ -15,6 +15,10 @@ class CreateRppsTable extends Migration
     {
         Schema::create('rpps', function (Blueprint $table) {
             $table->id();
+            $table->integer('guru_id')->length(20);
+            $table->string('nama_rpp')->length(20);
+            $table->string('keterangan_rpp')->length(100)->nullable();
+            $table->string('file_rpp')->length(100);
             $table->timestamps();
         });
     }

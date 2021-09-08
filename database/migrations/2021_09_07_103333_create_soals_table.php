@@ -15,6 +15,11 @@ class CreateSoalsTable extends Migration
     {
         Schema::create('soals', function (Blueprint $table) {
             $table->id();
+            $table->integer('jadwal_id')->length(3);
+            $table->string('nama_soal')->length(10);
+            $table->longText('isi_soal');
+            $table->date('batas_soal');
+            $table->string('file_soal')->length(100);
             $table->timestamps();
         });
     }

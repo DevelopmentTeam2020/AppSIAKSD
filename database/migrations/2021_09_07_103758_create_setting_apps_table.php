@@ -15,6 +15,11 @@ class CreateSettingAppsTable extends Migration
     {
         Schema::create('setting_apps', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_sekolah')->length(20);
+            $table->string('logo_sekolah')->length(20);
+            $table->longText('alamat_sekolah');
+            $table->string('midtrans-key')->nullable();
+            $table->string('pendaftaran')->length(10)->nullable();
             $table->timestamps();
         });
     }

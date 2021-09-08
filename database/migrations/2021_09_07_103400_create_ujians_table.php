@@ -15,6 +15,14 @@ class CreateUjiansTable extends Migration
     {
         Schema::create('ujians', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_ujian')->length(20);
+            $table->integer('jadwal_id')->length(10);
+            $table->string('status_ujian')->length(10);
+            $table->date('tanggal_ujian');
+            $table->time('jam_mulai_ujian');
+            $table->time('jam_selesai_ujian');
+            $table->string('waktu_ujian')->length(5);
+            $table->integer('jumlah_soal')->length(3);
             $table->timestamps();
         });
     }

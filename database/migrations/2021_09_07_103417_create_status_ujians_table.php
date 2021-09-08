@@ -15,6 +15,10 @@ class CreateStatusUjiansTable extends Migration
     {
         Schema::create('status_ujians', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->length(10);
+            $table->integer('ujian_id')->length(10);
+            $table->string('status_ujian')->length(10);
+            $table->string('waktu')->length(10);
             $table->timestamps();
         });
     }

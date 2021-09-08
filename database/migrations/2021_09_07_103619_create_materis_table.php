@@ -15,6 +15,10 @@ class CreateMaterisTable extends Migration
     {
         Schema::create('materis', function (Blueprint $table) {
             $table->id();
+            $table->integer('jadwal_id')->length(20);
+            $table->string('nama_materi')->length(50);
+            $table->longText('isi_materi');
+            $table->string('file_materi')->length(100)->nullable();
             $table->timestamps();
         });
     }

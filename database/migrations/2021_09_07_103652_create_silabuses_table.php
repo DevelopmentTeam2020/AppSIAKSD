@@ -15,6 +15,10 @@ class CreateSilabusesTable extends Migration
     {
         Schema::create('silabuses', function (Blueprint $table) {
             $table->id();
+            $table->integer('guru_id')->length(20);
+            $table->string('nama_silabus')->length(20);
+            $table->string('keterangan_silabus')->length(100)->nullable();
+            $table->string('file_silabus')->length(100);
             $table->timestamps();
         });
     }
